@@ -33,6 +33,7 @@ const director1: Directors = {
 };
 console.log(director1);
 
+// -----------------------------------------------------
 
 function printTeacher(firstName: string, lastName: string) {
     const first = firstName[0]
@@ -44,3 +45,22 @@ interface printTeacherFunction {
 }
 
 printTeacher("John", "Doe")
+
+// ----------------------------------------------
+interface constructorOfstudentClass {
+    new (firstname: string, lastName: string):StudentClass;
+}
+interface studentClass {
+    workOnHomework(): string,
+    displayName(): string
+}
+class StudentClass implements studentClass {
+    constructor(public firstName:string, lastName:string){}
+
+    workOnHomework(): string{
+        return "Currently working"
+    }
+    displayName(): string{
+        return this.firstName
+    }
+}
