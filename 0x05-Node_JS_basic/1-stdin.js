@@ -1,15 +1,12 @@
 #!/usr/bin/node
-const readline = require('readline');
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdin,
+console.log("Welcome to Holberton School, what is your name?")
+process.stdin.on('readable', function() {
+  var chunk = process.stdin.read();
+  if (chunk !== null) {
+    process.stdout.write('Your name is: ' + chunk);
+  }
 });
-console.log("Welcome to Holberton School, what is your name?\n");
 
-rl.on('line', (input) => {
-    console.log(`Your name is: ${input}`);
-    rl.close();
-});
-rl.on('close', () => {
-    console.log("This important software is now closing");
+process.stdin.on('end', function() {
+  process.stdout.write('This important software is now closing');
 });
