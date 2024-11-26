@@ -4,7 +4,7 @@ const { createServer } = require('http');
 const hostname = 'localhost';
 const port = 1245;
 
-const app = createServer((res) => {
+const app = createServer((req, res) => {
   res.statusCode = 200;
   res.end('Hello Holberton School!');
 });
