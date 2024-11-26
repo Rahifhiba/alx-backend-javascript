@@ -12,7 +12,7 @@ function countStudents(path) {
     const ListStudSWE = [];
     let CountStudCS = 0;
     let CountStudSWE = 0;
-    for (let i = 1; i <= NumStudent; i + 1) {
+    for (let i = 1; i <= NumStudent; i ++) {
       if (word[i].includes('CS')) {
         ListStudCS.push(word[i][0]);
         CountStudCS += 1;
