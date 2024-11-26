@@ -1,7 +1,7 @@
 #!/usr/bin/node
-console.log("Welcome to Holberton School, what is your name?")
+console.log("Welcome to Holberton School, what is your name?");
 process.stdin.on('readable', function() {
-  var chunk = process.stdin.read();
+  const chunk = process.stdin.read();
   if (chunk !== null) {
     process.stdout.write('Your name is: ' + chunk);
   }
