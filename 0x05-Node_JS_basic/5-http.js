@@ -43,13 +43,12 @@ const app = createServer(async (req, res) => {
     res.end('Hello Holberton School!');
   }
   if (req.url === '/students') {
-    res.end('This is the list of our students\n');
     try {
       res.writeHead(200);
       const data = await countStudents(path);
-      res.end(data);
+      res.end(`This is the list of our students\n${data}`);
     } catch (error) {
-      res.end('Cannot load the database');
+      res.end('This is the list of our students\nCannot load the database');
     }
   }
 });
