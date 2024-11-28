@@ -18,4 +18,12 @@ describe("calculateNumber", function() {
   it("checks if 10/0='Error''", function() {
     assert.equal(calculateNumber('DIVIDE',10, 0), 'Error');
   });
+  it("checks if 1.7 + 3.2 = 5 (rounding up and down)", function() {
+    assert.equal(calculateNumber('SUM', 1.7, 3.2), 5);
+  });
+
+  it("checks if -1.4 + -3.6 = -5 (negative rounding)", function() {
+    assert.equal(calculateNumber('SUM', -1.4, -3.6), -5);
+  });
+
 });
