@@ -6,4 +6,4 @@ function sendPaymentRequestToApi(totalAmount, totalShipping){
     return `The total is: ${tot}`
 }
 
-module.exports = Utils
+module.exports = sendPaymentRequestToApi;

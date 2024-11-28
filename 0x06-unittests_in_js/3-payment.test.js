@@ -3,17 +3,10 @@ const Utils = require('./utils');
 const sendPaymentRequestToApi = require('./3-payment');
 const sinon =require('sinon')
 
-describe("calculateNumber", function() {
-    it("checks if 1.4+4.5=6", function() {
-        expect(calculateNumber('SUM', 1.4, 4.5)).to.equal(6);
-      });
-      it("checks if 1.4-4.5=-4", function() {
-        expect(calculateNumber('SUBTRACT', 1.4, 4.5)).to.equal(-4);
-      });
-      it("checks if 1.4/4.5=0.2", function() {
-        expect(calculateNumber('DIVIDE', 1.4, 4.5)).to.equal(0.2);
-      });
-      it("checks if 1.4/0= error", function() {
-        expect( calculateNumber('DIVIDE', 1.4, 0)).to.equal('Error');
-      });
-    });
+describe("sendPaymentRequestToApi", function() {
+    it("checks ifutils match ", function() {
+        const spy = sinon.spy(Utils, 'calculateNumber');
+        sendPaymentRequestToApi(100, 20);
+        sinon.assert.calledWith(spy, 'SUM', 100, 20);
+        spy.restore();
+    })})
