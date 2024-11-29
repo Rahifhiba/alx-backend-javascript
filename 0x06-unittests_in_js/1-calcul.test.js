@@ -15,8 +15,8 @@ describe("calculateNumber", function() {
   it("checks if 9.5-4=-5", function() {
     assert.equal(calculateNumber('SUBTRACT',9.5, 4.5), 5);
   });
-  it("checks if 10.5/2='Error''", function() {
-    assert.equal(calculateNumber('DIVIDE',10.5, 2), 5.5);
+  it("checks if 10.5/5.1=2.2'", function() {
+    assert.equal(calculateNumber('DIVIDE',10.5, 5.1), 2.2);
   });
   it("checks if 10/0='Error''", function() {
     assert.equal(calculateNumber('DIVIDE',10, 0), 'Error');
