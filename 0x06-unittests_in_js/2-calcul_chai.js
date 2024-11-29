@@ -3,7 +3,7 @@ function calculateNumber(type, a, b){
     if (type === 'SUM'){
         return(Math.round(a)+Math.round(b));
     }
-    if (type === 'SUBSTRACT'){
+    if (type === 'SUBTRACT'){
         return(Math.round(a)-Math.round(b));
     }
     if (type === 'DIVIDE'){

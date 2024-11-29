@@ -11,7 +11,7 @@ describe("calculateNumber", function() {
     expect(calculateNumber('DIVIDE', 7, 2)).to.equal(3.5);
   });
   it("checks if -9-4=-13", function() {
-    expect(calculateNumber('SUBSTRACT',-9, 4)).to.equal(-13);
+    expect(calculateNumber('SUBTRACT',-9, 4)).to.equal(-13);
   });
   it("checks if 10/0='Error''", function() {
     expect(calculateNumber('DIVIDE',10, 0)).to.equal('Error');
