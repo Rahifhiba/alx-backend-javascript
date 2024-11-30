@@ -30,7 +30,6 @@ async function countStudents(path) {
     return output;
   } catch (error) {
     return('Cannot load the database');
-    // throw new Error('Cannot load the database')
   }
 }
 const app = express();
