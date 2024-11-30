@@ -29,8 +29,8 @@ async function countStudents(path) {
     output += `Number of students in SWE: ${CountStudSWE}. List: ${ListStudSWE.join(', ')}`;
     return output;
   } catch (error) {
-    return console.log('Cannot load the database');
-    // return Promise.reject('Cannot load the database');
+    return('Cannot load the database');
+    // throw new Error('Cannot load the database')
   }
 }
 const app = express();
