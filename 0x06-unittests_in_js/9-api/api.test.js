@@ -23,6 +23,12 @@ describe("index", function() {
         })
 
     })
+    it("check if Correct status code when :id is empty", function() {
+        request('http://localhost:7865/cart/', function (err, resp, body) {
+            assert.equal(resp.statusCode, 404);
+        })
+
+    })
 
 
 });
